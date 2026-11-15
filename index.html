@@ -1,14 +1,14 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>H249 call replay</title>
 <style>
-:root{--bg:#f7f6f3;--card:#fff;--ink:#1d1d1b;--mute:#6b6a66;--line:#e4e2dc;--mia:#eef3fb;--miaB:#c9d8ef;--bad:#b3261e;--badBg:#fdf0ef;--ok:#1e6b3a;--okBg:#edf7f0}
-@media (prefers-color-scheme:dark){:root{--bg:#151514;--card:#1e1e1c;--ink:#ecebe7;--mute:#a19f99;--line:#33322f;--mia:#1c2636;--miaB:#2e4160;--bad:#f2a49d;--badBg:#3a1f1d;--ok:#8fd3a5;--okBg:#183024}}
+:root{--bg:#f7f6f3;--card:#fff;--ink:#1d1d1b;--mute:#6b6a66;--line:#e4e2dc;--mia:#eef3fb;--miaB:#c9d8ef;--bad:#b3261e;--badBg:#fdf0ef;--ok:#1e6b3a}
+@media (prefers-color-scheme:dark){:root{--bg:#151514;--card:#1e1e1c;--ink:#ecebe7;--mute:#a19f99;--line:#33322f;--mia:#1c2636;--miaB:#2e4160;--bad:#f2a49d;--badBg:#3a1f1d;--ok:#8fd3a5}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
 main{max-width:720px;margin:0 auto;padding:32px 16px 48px}
-h1{font-size:24px;margin:0 0 4px}.sub{color:var(--mute);margin:0 0 24px;font-size:14px}
+h1{font-size:24px;margin:0 0 4px}h2{font-size:18px;margin:32px 0 12px}.sub{color:var(--mute);margin:0 0 24px;font-size:14px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:16px}
 .label{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);margin:0 0 8px}
-.product{font-weight:600;margin:0}.product a{color:inherit}
+.product{font-weight:600;margin:0}.meta{color:var(--mute);font-size:14px;margin:4px 0 0}
 .turn{margin:12px 0;max-width:90%}.turn p{margin:0;padding:12px 14px;border-radius:12px;border:1px solid var(--line)}
 .who{font-size:12px;color:var(--mute);margin:0 0 4px}
 .mia p{background:var(--mia);border-color:var(--miaB)}.shopper{margin-left:auto}.shopper .who{text-align:right}
@@ -16,14 +16,21 @@ h1{font-size:24px;margin:0 0 4px}.sub{color:var(--mute);margin:0 0 24px;font-siz
 .checks{list-style:none;padding:0;margin:0}.checks li{padding:6px 0;border-top:1px solid var(--line);font-size:14px}.checks li:first-child{border-top:0}
 .checks b{color:var(--ok)}.foot{color:var(--mute);font-size:13px}
 </style></head><body><main>
-<h1>Mia no longer talks about stock</h1>
+<h1>Mia reads stock the way Canadian shoppers see it</h1>
 <p class="sub">H249 · replay of the Nov 15, 2026 Replogle Globes call with the fix (PR #636, not deployed yet)</p>
-<div class="card"><p class="label">Product the shopper was looking at</p><p class="product">Replogle 12&quot; Student Desktop Globe - Blue Ocean with Raised Relief</p></div>
-<div class="card old"><p class="label">What the real call said (Nov 15, 3:16 PM ET)</p><p>“I see you were looking at the 12 inch Student Desktop Globe. <b>It's sold out right now.</b> What were you hoping it would do for you?” The globe had plenty in stock.</p></div>
-<div class="card"><p class="label">Replay with the fix</p><div class="turn mia"><div class="who">Mia</div><p>Hi, it&#x27;s Mia from Replogle Globes. Thanks for talking with me: the reward is $35 off. To unlock your code, you need to say at least 1,200 words on this call: the &quot;Your words&quot; bar at the bottom of your screen counts them. You can stop whenever you like, but it only unlocks once you reach that. I see you were looking at the 12 inch Student Desktop Globe. What caught your eye?</p></div><div class="turn shopper"><div class="who">Shopper</div><p>Is it in stock?</p></div><div class="turn mia"><div class="who">Mia</div><p>The product page has the latest on that. Is this globe for a child&#x27;s learning, a gift, or something for yourself?</p></div></div>
+<div class="card old"><p class="label">What went wrong (Nov 15, 3:16 PM ET)</p><p>The real call said: “I see you were looking at the 12 inch Student Desktop Globe. <b>It's sold out right now.</b> What were you hoping it would do for you?” Our servers checked the store as a US visitor. Replogle sells in Canada only, and in Canada the globe can be ordered. Now every store's stock is read for the country it sells in: Replogle is read as Canada.</p></div>
+
+<h2>1 · The Nov 15 call, read as Canada</h2>
+<div class="card"><p class="label">Product the shopper was looking at</p><p class="product">Replogle 12&quot; Student Desktop Globe - Blue Ocean with Raised Relief</p><p class="meta">Can be ordered in Canada</p></div>
+<div class="card"><p class="label">Replay with the fix</p><div class="turn mia"><div class="who">Mia</div><p>Hi, it&#x27;s Mia from Replogle Globes. Thanks for talking with me: the reward is $35 off. To unlock your code, you need to say at least 1,200 words on this call: the &quot;Your words&quot; bar at the bottom of your screen counts them. You can stop whenever you like, but it only unlocks once you reach that. I see you were looking at the 12 inch Student Desktop Globe. What caught your eye?</p></div><div class="turn shopper"><div class="who">Shopper</div><p>Is it in stock?</p></div><div class="turn mia"><div class="who">Mia</div><p>Yes, that one can be ordered right now from the store. What do you have in mind for it: is it for a student, a gift, or your own desk?</p></div></div>
+
+<h2>2 · A globe that truly can't be ordered in Canada</h2>
+<div class="card"><p class="label">Product the shopper was looking at</p><p class="product">Lenox 12&quot; Antique Ocean Desk Globe - Raised Relief with Walnut Base</p><p class="meta">Can't be ordered in Canada on 2026-11-15 · closest one that can, put on their screen: Spokane 12&quot; Antique Ocean Desk Globe - Raised Relief with Walnut Base</p></div>
+<div class="card"><p class="label">Replay with the fix</p><div class="turn mia"><div class="who">Mia</div><p>Hi, it&#x27;s Mia from Replogle Globes. Thanks for talking with me: the reward is $35 off. To unlock your code, you need to say at least 1,200 words on this call: the &quot;Your words&quot; bar at the bottom of your screen counts them. You can stop whenever you like, but it only unlocks once you reach that. I see you were looking at the Lenox 12 inch Antique Ocean Desk Globe. That one can&#x27;t be ordered just now, but the Spokane 12 inch Antique Ocean Desk Globe can, and it&#x27;s the closest one we have. What would you want it to do for you?</p></div><div class="turn shopper"><div class="who">Shopper</div><p>Is it in stock?</p></div><div class="turn mia"><div class="who">Mia</div><p>Yes, the Spokane can be ordered right now. The Lenox is the one that can&#x27;t. Is this globe for you, or are you picking it as a gift?</p></div></div>
+
 <div class="card"><p class="label">Checks</p><ul class="checks">
-<li><b>Pass</b> · the opener says nothing about stock</li>
-<li><b>Pass</b> · asked “Is it in stock?”, Mia points to the product page with no stock words</li>
-<li><b>Pass</b> · she goes straight back to one question about the shopper</li></ul></div>
-<p class="foot">How this was made: the real call context built by the fix's code for this product (the store's live settings and pages, nothing written), the opener exactly as the call builds it, then one real turn from the same model the call uses (claude-sonnet-5-5). Read only: no shopper was contacted. Replayed 2026-11-15.</p>
+<li><b>Pass</b> · Nov 15 globe: no talk of it being unavailable; asked “Is it in stock?”, Mia says it can be ordered</li>
+<li><b>Pass</b> · unavailable globe: Mia says so kindly and offers the closest one that can be ordered, never “sold out”</li>
+<li><b>Pass</b> · both times she goes back to one question about the shopper</li></ul></div>
+<p class="foot">How this was made: the real call context built by the fix's code (the store's live settings and pages read as Canada; nothing written), the opener exactly as the call builds it, then one real turn from the same model the call uses (claude-sonnet-5-5). Read only: no shopper was contacted. Replayed 2026-11-15.</p>
 </main></body></html>
